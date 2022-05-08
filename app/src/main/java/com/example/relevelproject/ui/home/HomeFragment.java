@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -18,7 +17,6 @@ import com.example.relevelproject.R;
 import com.example.relevelproject.RoomDB;
 import com.example.relevelproject.databinding.FragmentHomeBinding;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
@@ -35,10 +33,10 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        database = RoomDB.getInstance(getContext());
+        database = RoomDB.getInstance(root.getContext());
         recyclerView = root.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        mainDataList = database.mainDao().getAll();
+        mainDataList = RoomDB.getInstance(root.getContext()).mainDao().getAll();
 
         MyAdapter recylceAdapter = new MyAdapter(getContext(),mainDataList);
         recyclerView.setAdapter(recylceAdapter);

@@ -6,8 +6,10 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {MainData.class},version = 1)
-public abstract class RoomDB extends RoomDatabase{
+
+
+@Database(entities = {MainData.class},version = 2)
+public abstract class RoomDB extends RoomDatabase {
 
     private static RoomDB database;
 

@@ -6,14 +6,16 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
-import java.sql.Blob;
 
 @Entity(tableName = "table_name")
 public class MainData implements Serializable {
     @PrimaryKey(autoGenerate = true)
     private int ID;
 
-    public MainData( String name, String description, int price, int discount) {
+    public MainData() {
+    }
+
+    public MainData(String name, String description, int price, int discount) {
         this.ID = ID;
         this.name = name;
         Description = description;
@@ -21,7 +23,7 @@ public class MainData implements Serializable {
         this.discount = discount;
     }
 
-    @ColumnInfo(name = "Item Name")
+    @ColumnInfo(name = "Item_Name")
     private String name;
 
     public int getID() {
@@ -64,13 +66,13 @@ public class MainData implements Serializable {
         this.discount = discount;
     }
 
-    @ColumnInfo(name = "Item Description")
+    @ColumnInfo(name = "Item_Description")
     private String Description;
 
-    @ColumnInfo(name = "Item Price")
+    @ColumnInfo(name = "Item_Price")
     private int price;
 
-    @ColumnInfo(name = "Item Discount")
+    @ColumnInfo(name = "Item_Discount")
     private int discount;
 
 }

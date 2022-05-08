@@ -1,5 +1,6 @@
 package com.example.relevelproject;
 
+
 import static androidx.room.OnConflictStrategy.REPLACE;
 
 import androidx.room.Dao;
@@ -23,5 +24,10 @@ public interface MainDAO {
 
     @Query("SELECT * FROM table_name")
     List<MainData> getAll();
+
+    @Query( "UPDATE table_name SET Item_Name = :sName, Item_Description = :sdescription, Item_Price = :sprice, Item_Discount = :sdiscount WHERE ID = :sID")
+    void update(int sID,String sName,String sdescription,int sprice,int sdiscount);
+
+
 
 }

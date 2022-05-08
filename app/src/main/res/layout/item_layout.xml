@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_marginTop="20dp"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
 
     <LinearLayout
@@ -19,7 +19,7 @@
         android:id="@+id/item_id"/>
     <TextView
         android:layout_width="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:layout_height="wrap_content"
         android:textSize="24dp"
         android:text="Hello"
@@ -45,5 +45,25 @@
         android:textSize="24dp"
         android:text="Hello"
         android:id="@+id/item_discount"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="right"
+        android:gravity="right">
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/edit_Field"
+            android:src="@drawable/edit_vc"/>
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="32dp"
+            android:id="@+id/delete_field"
+            android:src="@drawable/delete_vc"/>
+
     </LinearLayout>
 </LinearLayout>

@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -119,7 +118,7 @@ public class DashboardFragment extends Fragment {
 
 
                 database = RoomDB.getInstance(getContext());
-                MainData mainData = new MainData(c_name,c_discount,final_price,final_discount);
+                MainData mainData = new MainData(c_name,c_desc,final_price,final_discount);
                 database.mainDao().insert(mainData);
 
             }
